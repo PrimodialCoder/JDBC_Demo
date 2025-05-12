@@ -18,7 +18,9 @@ public class Main {
         }
 
         try {
+            // Connection object to establish connection with database
             Connection connection = DriverManager.getConnection(url, username, password);
+            // Statement object to execute SQL queries
             Statement statement = connection.createStatement();
             String query2 = "INSERT INTO students(name, age, marks) VALUES ('Ashu', 32, 90.5);";
             int result = statement.executeUpdate(query2);
